@@ -50,7 +50,7 @@ function validateForm() {
     }
 
     if (isValid) {
-        window.location.href = './pages/thanks.html'; // Replace 'thank-you.html' with the actual URL of your thank you page
+        window.location.href = './pages/thanks.html';
     }
 }
 
@@ -165,11 +165,17 @@ document.addEventListener('DOMContentLoaded', () => {
 // Video Popup section Start
 document.addEventListener('DOMContentLoaded', (event) => {
     const videoActive = document.querySelector('.video_active');
+    const videoPassive = document.querySelector('.video_passive');
     const videoPopup = document.getElementById('video_popup');
     const popupVideo = document.getElementById('popup_video');
     const closeButton = document.querySelector('.close_button');
 
     videoActive.addEventListener('click', () => {
+        videoPopup.style.display = 'block';
+        popupVideo.play();
+    });
+
+    videoPassive.addEventListener('click', () => {
         videoPopup.style.display = 'block';
         popupVideo.play();
     });
