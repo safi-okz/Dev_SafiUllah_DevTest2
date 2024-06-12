@@ -164,16 +164,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Video Popup section Start
 document.addEventListener('DOMContentLoaded', (event) => {
-    const videoActive = document.querySelector('.video_active');
+    // const videoActive = document.querySelector('.video_active');
     const videoPassive = document.querySelector('.video_passive');
     const videoPopup = document.getElementById('video_popup');
     const popupVideo = document.getElementById('popup_video');
     const closeButton = document.querySelector('.close_button');
 
-    videoActive.addEventListener('click', () => {
-        videoPopup.style.display = 'block';
-        popupVideo.play();
-    });
+    // videoActive.addEventListener('click', () => {
+    //     videoPopup.style.display = 'block';
+    //     popupVideo.play();
+    // });
 
     videoPassive.addEventListener('click', () => {
         videoPopup.style.display = 'block';
