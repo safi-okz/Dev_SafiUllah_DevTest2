@@ -755,6 +755,7 @@ padding-right: 1rem;
     background: linear-gradient(#305D52, #153F38);
     padding: 5.875rem 0 4rem 5%;
     width: 50%;
+    /* z-index: 500; */
 }
 
 .video_heading {
@@ -821,6 +822,7 @@ padding-right: 1rem;
   transform: translate(-50%, -50%);
     cursor: pointer;
     transition: all .5s ease-in-out;
+    z-index: 40;
 }
 
 /* .video_active {
@@ -857,7 +859,7 @@ padding-right: 1rem;
 .video_popup {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 400;
     left: 0;
     top: 0;
     width: 100%;
@@ -991,6 +993,39 @@ padding-right: 1rem;
 
 /* Thank You End */
 
+
+/* ***************************************** */
+.box {
+    z-index: 20;
+  }
+  
+  .box:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 40%;
+    bottom: 0;
+    width: 28%;
+    background: linear-gradient(#305D52, #153F38);
+  }
+  .box:after {
+    -webkit-mask:
+      radial-gradient(80% 100% at left   ,white 79.5%,transparent 80%) top,
+      radial-gradient(80% 100% at right  ,transparent 79.5%,white 80%) bottom;
+    mask:
+      radial-gradient(80% 100% at left   ,white 79.5%,transparent 80%) top,
+      radial-gradient(80% 100% at right  ,transparent 79.5%,white 80%) bottom;
+    -webkit-mask-size:100% 50.1%;
+    -webkit-mask-repeat:no-repeat;
+    mask-size:100% 50.1%;
+    mask-repeat:no-repeat;
+    background: linear-gradient(#305D52, #153F38);
+    z-index: -1;
+  }
+
+  
+
 /* Responsive CSS */
 @media (max-width: 1157px) {
     .carousel_card {
@@ -1115,7 +1150,7 @@ padding-right: 1rem;
 
 .video_left_side {
     width: 100%;
-    padding-bottom: 9rem;
+    padding-bottom: 6rem;
 }
 
 .video_right_side {
@@ -1134,7 +1169,7 @@ padding-right: 1rem;
 .video_passive {
         width: 12rem;
         height: 12rem;
-        top: 0rem;
+        top: 2rem;
 }
 
 /* .video_active {
@@ -1165,6 +1200,38 @@ padding-right: 1rem;
 .footer_links {
     text-align: center;
 }
+
+/* Video cureve Start  */  
+  .box:after{
+    height:200px;
+    content:"";
+    position:absolute;
+    top: 55%;
+    left:0;
+    right:0;
+    width: 100vw;
+    z-index: 300 !important;
+    background:  #153F38;
+
+  }
+  
+  .box:after {
+    height:200px;
+    -webkit-mask:
+      radial-gradient(100% 80% at top   ,white 79.5%,transparent 80%) left,
+      radial-gradient(100% 80% at bottom,transparent 79.5%,white 80%) right;
+    mask:
+      radial-gradient(100% 80% at top   ,white 79.5%,transparent 80%) left,
+      radial-gradient(100% 80% at bottom,transparent 79.5%,white 80%) right;
+    -webkit-mask-size:50.1% 100%;
+    -webkit-mask-repeat:no-repeat;
+    mask-size:50.1% 100%;
+    mask-repeat:no-repeat;
+    background: #153F38;
+    z-index: 300 !important;
+  }
+/* Video cureve End */
+
 }
 
 @media (max-width: 700px) {
@@ -1324,6 +1391,14 @@ padding-right: 1rem;
     width: 100%;
 }
 
+.video_passive {
+    top: 3rem;
+}
+
+.box:after {
+    top: 60%;
+}
+
 }
 
 @media (max-width: 494px) {
@@ -1366,6 +1441,12 @@ padding-right: 1rem;
 .footer_right {
     margin-bottom: .8rem;
 }
+}
+
+@media (max-width: 431px) {
+    .box:after {
+        top: 65%;
+    }
 }
 
 @media (max-width: 400px) {
